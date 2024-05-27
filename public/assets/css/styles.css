@@ -1,0 +1,360 @@
+/* =============== GOOGLE FONTS =============== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =============== CSS VARIABLES =============== */
+:root{
+    /* Colors */
+    --first-color: #3858d6;
+    --first-color-alt: #2948c7;
+    --first-color-light: #5670d7;
+    --first-color-lighten: #f0f3ff;
+    --second-color: #00B37D;
+    --title-color: #1f2f70;
+    --text-color: #6c7493;
+    --text-color-light: #b8bbc7;
+    --border-color: #f5f7ff;
+    --body-color: #fff;
+    --container-color: #fff;
+    --dark-color: #464455;
+
+  /* Fonts */
+  --body-font: "Poppins", sans-serif;
+  font-size: 62.5%;   /*For using rem units instead of px */
+}
+
+/* =============== CSS RESETS =============== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    font-size: 1.6rem;
+    overflow-x: hidden;
+  }
+  ul, ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  input,
+  button {
+    outline: none;
+    border: none;
+  }
+  button{
+    cursor: pointer;
+    font-family: var(--body-font);
+  }
+  
+/* =============== Actual Styling starts here =============== */
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 6rem;
+  overflow: hidden;
+  background: transparent;
+  backdrop-filter: blur(2.5rem);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+.nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 3rem;
+}
+.nav__logo{
+  width: 11rem;
+}
+.nav__logo img{
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+.nav__menu{
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.nav__menu ul{
+  display: flex;
+  align-items: center;
+  /* gap: 2rem; */
+}
+.nav__menu ul li a{
+  color: var(--text-color);
+  transition: .2s;
+  padding-right: 2rem;
+}
+.nav__menu ul li a:is(:hover, :active){
+  color: var(--text-color-light);
+}
+.home-btn{
+  color: var(--text-color-light);
+}
+
+/* Nav Side menu */
+.nav__side-bar{
+  position: fixed;
+  top: 6rem;
+  right: -100%;
+  width: 30%;
+  height: 70vh;
+  z-index: 999;
+  border-radius: 0 0 0 3rem;
+  background-color: var(--container-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: .4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav__side-link{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+  position: relative;
+}
+.nav__side-link:hover{
+  color: var(--first-color);
+}
+.nav__side-link > i{
+  color: var(--first-color-alt);
+  transition: .3s;
+}
+.nav__side-link > p{
+  color: var(--first-color-light);
+  transition: .3s;
+}
+.nav__side-link:hover > i, p{
+  color: var(--first-color);
+}
+
+
+/* side menu toggle */
+.toggle-active{
+  right: 0;
+  transition: .4s;
+}
+.nav__toggle{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.nav__toggle i{
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+.nav__toggle i:hover{
+  color: var(--text-color);
+}
+
+
+/* Hero Section */
+.hero{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(170deg,
+              hsl(0, 0%, 22%) 0%,
+              hsl(0, 0%, 6%) 30%);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-top: 10rem;
+}
+.hero__content{
+  /* padding-top: 2rem; */
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.hero__content-text{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-color-light);
+  text-align: center;
+  /* padding-bottom: 3rem; */
+}
+.hero__content-btn{
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  color: var(--container-color);
+  background-color: var(--first-color);
+  font-size: medium;
+  box-shadow: 2px 8px 25px -5px var(--first-color);
+  transition: .4s;
+}
+.hero__content-btn:hover{
+  background-color: var(--first-color-light);
+}
+.hero__img{
+  margin-bottom: 6rem;
+  width: 100%;
+}
+
+/* Blogs section */
+.blog {
+  width: 100%;
+  padding: 5rem 5vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.blog__card {
+  outline: 2px solid var(--first-color-light);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: .4s;
+}
+.blog__card:hover {
+  transform: scale(1.02);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.blog__card-img {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  outline: 2px solid blue;
+}
+.blog__card-img img{
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.blog__card-content {
+  padding: 0.3rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.blog__card-content h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--title-color);
+  line-height: 1.2;
+}
+.blog__card-content p {
+  color: var(--text-color);
+  padding-bottom: 0.5rem;
+}
+.blog__card-content a{
+  background-color: var(--first-color-alt);
+  padding: .5rem 1rem;
+  border-radius: 3rem;
+  align-self: flex-start;
+  color: var(--container-color);
+  margin-bottom: 1rem;
+  margin-inline: auto;
+  transition: .4s;
+
+}
+.blog__card-content a:hover{
+  background-color: var(--first-color-light);
+}
+
+/* =============== Media Queries =============== */
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  .nav{
+    padding: 1rem;
+  }
+  .nav__logo{
+    width: 7rem;
+  }
+  .nav__menu{
+    margin-right: 0.5rem;
+  }
+  .nav__menu ul li a{
+    /* font-size: 1rem; */
+    padding-right: 0.5rem;
+  }
+  .nav__toggle{
+    padding-top: 0.5rem;
+  }
+  .blog{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .nav__side-bar{
+    width: 50%;
+    font-size: 1.3rem;
+  }
+  .hero{
+    height: 90vh;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 480px and up) */
+@media screen and (max-width: 375px) {
+  .nav__menu ul li a{
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .hero__content-text{
+    font-size: 3rem;
+  }
+  .hero__content-btn{
+    padding: 1rem 2rem;
+  }
+  .hero__img{
+    width: 90%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hero{
+    flex-flow: row nowrap;
+  }
+  .hero__content{
+    flex-grow: 2;
+  }
+  .hero__content-text{
+    font-size: 5rem;
+  }
+  .hero__img{
+    flex-grow: 1;
+    flex-basis: 60%;
+  }
+  .blog{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+
+

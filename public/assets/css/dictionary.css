@@ -1,0 +1,160 @@
+/* =============== GOOGLE FONTS =============== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =============== CSS VARIABLES =============== */
+:root{
+    /* Colors */
+    --first-color: #3858d6;
+    --first-color-alt: #2948c7;
+    --first-color-light: #5670d7;
+    --first-color-lighten: #f0f3ff;
+    --second-color: #00B37D;
+    --title-color: #1f2f70;
+    --text-color: #6c7493;
+    --text-color-light: #b8bbc7;
+    --border-color: #f5f7ff;
+    --body-color: #fff;
+    --container-color: #fff;
+    --dark-color: #464455;
+
+  /* Fonts */
+  --body-font: "Poppins", sans-serif;
+  font-size: 62.5%;   /*For using rem units instead of px */
+}
+
+/* =============== CSS RESETS =============== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+*:not(i) {
+    font-family: var(--body-font), sans-serif;
+}
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 1.6rem;
+    overflow-x: hidden;
+  }
+  ul, ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  input,
+  button {
+    outline: none;
+    border: none;
+  }
+  button{
+    cursor: pointer;
+    font-family: var(--body-font);
+  }
+  
+/* =============== Actual Styling starts here =============== */
+
+body {
+    background-color: var(--first-color-light);
+}
+.container {
+    background-color: var(--container-color);
+    width: 90vmin;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 80px 50px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
+}
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.search-box input {
+    padding: 5px;
+    width: 70%;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid var(--first-color-light);
+    font-size: 16px;
+    transition: .3s;
+}
+.search-box input:focus {
+    border-bottom: 3px solid var(--first-color);
+}
+.search-box button {
+    padding: 15px 0;
+    width: 25%;
+    background-color: var(--first-color);
+    border: none;
+    outline: none;
+    color: var(--container-color);
+    box-shadow: 2px 8px 25px -5px var(--first-color);
+    border-radius: 5px;
+    transition: .3s
+}
+.search-box button:hover {
+    background-color: var(--first-color-light);
+}
+.result {
+    position: relative;
+}
+.result h3 {
+    font-size: 30px;
+    color: var(--title-color);
+}
+.result .word {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.result button {
+    background-color: transparent;
+    color: #ae9cff;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.result .details {
+    display: flex;
+    gap: 10px;
+    color: var(--text-color);
+    margin: 5px 0 20px 0;
+    font-size: 14px;
+}
+.word-meaning {
+    color: var(--dark-color);
+}
+.word-example {
+    color: var(--text-color);
+    font-style: italic;
+    border-left: 5px solid #ae9cff;
+    padding-left: 20px;
+    margin-top: 30px;
+}
+.error {
+    margin-top: 80px;
+    text-align: center;
+}
+i{
+    color: var(--text-color-light);
+    transition: .3s;
+}
+i:hover{
+    color: var(--first-color);
+}

@@ -1,0 +1,81 @@
+/* =============== GOOGLE FONTS =============== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =============== CSS VARIABLES =============== */
+:root{
+    /* Colors */
+    --first-color: #3858d6;
+    --first-color-alt: #2948c7;
+    --first-color-light: #5670d7;
+    --first-color-lighten: #f0f3ff;
+    --second-color: #00B37D;
+    --title-color: #1f2f70;
+    --text-color: #6c7493;
+    --text-color-light: #b8bbc7;
+    --border-color: #f5f7ff;
+    --body-color: #fff;
+    --container-color: #fff;
+    --dark-color: #464455;
+
+  /* Fonts */
+  --body-font: "Poppins", sans-serif;
+  font-size: 62.5%;   /*For using rem units instead of px */
+}
+
+/* =============== CSS RESETS =============== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    font-size: 1.6rem;
+    overflow-x: hidden;
+  }
+  ul, ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  input,
+  button {
+    outline: none;
+    border: none;
+  }
+  button{
+    cursor: pointer;
+    font-family: var(--body-font);
+  }
+  
+/* =============== Actual Styling starts here =============== */
+
+.header{
+    background: linear-gradient(170deg,
+    hsl(0, 0%, 22%) 0%,
+    hsl(0, 0%, 6%) 30%);
+}
+.nav__logo img {
+    mix-blend-mode: normal;
+}
+.dashboard-link{
+    color: var(--text-color-light);
+}
+.blog{
+  margin-top: 6rem;
+}

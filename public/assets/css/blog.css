@@ -1,0 +1,156 @@
+/* =============== GOOGLE FONTS =============== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =============== CSS VARIABLES =============== */
+:root{
+    /* Colors */
+    --first-color: #3858d6;
+    --first-color-alt: #2948c7;
+    --first-color-light: #5670d7;
+    --first-color-lighten: #f0f3ff;
+    --second-color: #00B37D;
+    --title-color: #1f2f70;
+    --text-color: #6c7493;
+    --text-color-light: #b8bbc7;
+    --border-color: #f5f7ff;
+    --body-color: #fff;
+    --container-color: #fff;
+    --dark-color: #464455;
+
+  /* Fonts */
+  --body-font: "Poppins", sans-serif;
+  font-size: 62.5%;   /*For using rem units instead of px */
+}
+
+/* =============== CSS RESETS =============== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    font-size: 1.6rem;
+    overflow-x: hidden;
+  }
+  ul, ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  input,
+  button {
+    outline: none;
+    border: none;
+  }
+  button{
+    cursor: pointer;
+    font-family: var(--body-font);
+  }
+  
+/* =============== Actual Styling starts here =============== */
+
+.header{
+    background: linear-gradient(170deg,
+    hsl(0, 0%, 22%) 0%,
+    hsl(0, 0%, 6%) 30%);
+}
+.nav__logo img {
+    mix-blend-mode: normal;
+}
+.banner{
+    margin-top: 6rem;
+}
+.blogs__section{
+    width: calc(100% - 2rem);
+    margin-inline: auto;
+    margin-top: 2rem;
+}
+.created{
+    margin-left: 0.4rem;
+    padding-bottom: 1rem;
+    font-style: italic;
+}
+.article,
+.title{
+    min-height: auto;
+    height: fit-content;
+    white-space: normal;
+}
+.article{
+  margin-bottom: 5rem;
+}
+.created span {
+    font-weight: 500;
+}
+.article-img{
+  max-width: 100%;
+  max-height: 40rem;
+  object-fit: contain;
+  margin: 1rem auto;
+}
+.read__more-heading{
+  color: var(--dark-color);
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem 5vw;
+}
+.editor{
+  color: var(--text-color-light);
+}
+
+
+
+
+
+
+
+
+/* =============== Media Queries =============== */
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+    .title{
+        font-size: 2.5rem;
+    }
+    .created{
+        font-size: 1rem;
+    }
+    .article{
+        font-size: 1.5rem;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 480px and up) */
+  @media only screen and (min-width: 480px) {
+
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  
+  }
