@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+          <div class="card_title">
+            <h1>Log In</h1>
+        </div>
+        <div class="form">
+                <input type="email" name="email" placeholder="Email" id="email" required/>
+                <input type="password" name="password" placeholder="Password" id="password" required/>
+                <button id="login-btn">Log in</button>
+            <span class="signup-link">Don't have an account? <a href="/register">Sign Up</a></span>
+        </div>
+        <p id="msg"></p>
+    </div>
+
+      <script type="module" src="./assets/js/login.js"></script>
+      <script type="module" src="./assets/js/firebase.js"></script>
+      <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

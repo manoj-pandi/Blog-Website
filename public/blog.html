@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Article</title>
+        
+    <!--=============== FAVICON ===============-->
+    <script src="https://kit.fontawesome.com/3a18a52ce5.js" crossorigin="anonymous"></script>
+
+     <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/editor.css">
+    <link rel="stylesheet" href="./assets/css/blog.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo">
+                <a href="/"><img src="./assets/img/logo.png" alt="Zen Logo"></a>
+            </div>
+            <div class="nav__menu">
+                <ul id="links-container">
+                    <li><a href="/" class="home-link">Home</a></li>
+                    <li><a href="/editor" class="editor-link">Editor</a></li>
+                    <li><a class="login-link" href="/login">Login</a></li>
+                    <li><a class="dashboard-link" href="/admin" style="display: none;">dashboard</a></li>
+                    <li><a class="logout-link"   >Logout</a></li>
+                </ul>
+            </div>
+            <button class="nav__toggle" id="toggle-btn"><i class="fa fa-solid fa-bars"></i></button>
+        </nav>
+    </header>
+    
+    <!-- Side Nav Menu -->
+    <div class="nav__side-bar" id="side-menu">
+        <a href="/dictionary" class="nav__side-link">
+            <i class="fa fa-light fa-book"></i>
+            <p class="nav__side-text">Dictionary</p>
+        </a>
+        <a href="/pomodoro" class="nav__side-link">
+            <i class="fa fa-light fa-stopwatch-20"></i>
+            <p class="nav__side-text">Pomodoro Timer</p>
+        </a>
+        <a href="/notes" class="nav__side-link">
+            <i class="fa fa-light fa-pen-clip"></i>
+            <p class="nav__side-text">Notes</p>
+        </a>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner"></div>
+
+    <!-- Blogs -->
+
+    <section class="blogs__section">
+        <div class="blogs">
+            <h1 class="title"></h1>
+            <p class="created"><span>Created on: </span></p>
+            <p class="article"></p>
+        </div>
+    </section>
+
+
+    <section class="read__more">
+        <span class="read__more-heading">Read More</span>
+        <section class="blog" id="blog">
+            
+        </section>
+    </section>
+
+
+    <!--=============== SCRIPT ===============-->
+    <script type="module" src="./assets/js/blog.js"></script>
+    <script type="module"  src="../public/assets/js/firebase.js"></script>
+    <script type="module" src="../public/assets/js/editor.js"></script>
+    <script type="module" src="./assets/js/editor.js"></script>
+    <script type="module" src="./assets/js/firebase.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="assets/js/login.js"></script>
+    <script type="module" src="assets/js/register.js"></script>
+</body>
+</html>

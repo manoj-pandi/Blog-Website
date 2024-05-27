@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Editor</title>
+
+    <!--=============== FAVICON ===============-->
+    <script src="https://kit.fontawesome.com/3a18a52ce5.js" crossorigin="anonymous"></script>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/editor.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    
+</head>
+<body>
+    
+    <div class="banner" id="banner">
+        <input type="file" accept="image/*" id="banner-upload" hidden >
+        <label for="banner-upload" class="banner__upload-icon"><i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </label>
+    </div>
+
+    <div class="blog__area">
+        <textarea class="title" id="title"  placeholder="What's your title?" type="text"></textarea>
+        <textarea class="article" id="article"  placeholder="Let your words flow..." type="text"></textarea>
+    </div>
+
+    <div class="blog__options">
+        <button class="publish-btn" id="publish-btn" title="publish">Publish</button>
+        <input type="file"  accept="image/*" id="image-upload" hidden>
+        <label for="image-upload" class="image-upload-btn" title="Upload Image"><i class="fa-solid fa-plus"></i></label>
+    </div>
+    <!-- Modal for error messages -->
+    <div id="error-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="error-message"></p>
+    </div>
+  </div>
+  
+
+    <!--=============== SCRIPT ===============-->
+    <script type="module"  src="../public/assets/js/firebase.js"></script>
+    <script type="module" src="../public/assets/js/editor.js"></script>
+
+</body>
+</html>
