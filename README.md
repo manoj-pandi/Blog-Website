@@ -23,6 +23,7 @@ In a world where digital presence is key, our project stands out by offering a d
 - **Frontend**: Create visually appealing and responsive interfaces using HTML, CSS, and JavaScript. 🎨💻
 - **Backend**: Design a robust database schema using FIREBASE for seamless data management. 🗃️🔥
 - **Functionality**: Develop user registration, login, and blog pages allowing for publishing, editing, and deletion of articles. 📝🔐
+- **Node.js**: Utilize Node.js for server-side scripting, facilitating dynamic content generation and interaction. 🚀🛠️
 - **Scientific Techniques**: Implement tools to maximize learning potential. 🧠🛠️
 
 ## Future Enhancements 🌱
